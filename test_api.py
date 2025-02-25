@@ -13,7 +13,8 @@ def test_create_valid_admin_user():
             }
     
     response = requests.post(url, json = user)
-    print(response)
+    print(response.status_code)
+    print(response.reason)
     #assert response.status_code == 200
 
 def test_get_all_genres():
